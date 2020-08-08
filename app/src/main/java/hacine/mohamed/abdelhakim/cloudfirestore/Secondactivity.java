@@ -61,26 +61,26 @@ public class Secondactivity extends AppCompatActivity {
             }
                   }).attachToRecyclerView(recyclerView);
 
-          adapter.setOnItemClickListener(new NoteAdapter.OnItemClickListener() {
-              @Override
-              public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
+//           adapter.setOnItemClickListener(new NoteAdapter.OnItemClickListener() {
+//               @Override
+//               public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
 
 
-                  Note note = documentSnapshot.toObject(Note.class);
-                            note.setDocumentid(documentSnapshot.getId());
+//                   Note note = documentSnapshot.toObject(Note.class);
+//                             note.setDocumentid(documentSnapshot.getId());
 
-                            String title = note.getTitle();
-                            String description = note.getDescription();
-                  int prio = note.getPriority();
-                  Log.d(TAG, "onItemClick: "+ description);
-                             Intent iiii = new Intent(Secondactivity.this , DetailsActivity.class);
-                  iiii.putExtra("t",title);
-                  iiii.putExtra("d",description);
-                  iiii.putExtra("p",prio);
-                  startActivity(iiii);
+//                             String title = note.getTitle();
+//                             String description = note.getDescription();
+//                   int prio = note.getPriority();
+//                   Log.d(TAG, "onItemClick: "+ description);
+//                              Intent iiii = new Intent(Secondactivity.this , DetailsActivity.class);
+//                   iiii.putExtra("t",title);
+//                   iiii.putExtra("d",description);
+//                   iiii.putExtra("p",prio);
+//                   startActivity(iiii);
 
-              }
-          });
+//               }
+//           });
     }
     @Override
     protected void onStart() {
